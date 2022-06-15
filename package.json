@@ -4,7 +4,9 @@
   "description": "A simple node command-line app that generates a team profile in HTML",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node index.js",
+    "watch": "nodemon index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/furhan-dev/team-profile-generator/issues"
   },
-  "homepage": "https://github.com/furhan-dev/team-profile-generator#readme"
+  "homepage": "https://github.com/furhan-dev/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
 }
