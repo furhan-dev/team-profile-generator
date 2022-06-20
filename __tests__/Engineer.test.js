@@ -4,7 +4,7 @@ let engineerData;
 let engineer;
 
 beforeAll(() => {
-    engineerData = ["Furhan", "003", "me@furhan.dev", "furhan-dev"];
+    engineerData = ["Furhan", "003", "me@furhan.dev", "4/20/15", "furhan-dev"];
 });
 
 beforeEach(() => {

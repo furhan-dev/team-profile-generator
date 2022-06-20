@@ -4,7 +4,7 @@ let employeeData;
 let employee;
 
 beforeAll(() => {
-    employeeData = ['Furhan Samani', '007', 'contact@furhan.dev'];
+    employeeData = ['Furhan Samani', '007', 'contact@furhan.dev', '4/20/15', 'fa-user'];
 });
 
 beforeEach(() => {
@@ -36,7 +36,19 @@ describe('getEmail', () => {
 });
 
 describe('getRole', () => {
-    it('Verify employee id matches input', () => {
+    it('Verify employee role matches input', () => {
         expect(employee.getRole()).toStrictEqual("Employee");
+    });
+});
+
+describe('getStartDate', () => {
+    it('Verify employee start date matches input', () => {
+        expect(employee.getStartDate()).toStrictEqual("4/20/15");
+    });
+});
+
+describe('getIcon', () => {
+    it('Verify employee icon matches input', () => {
+        expect(employee.getIcon()).toStrictEqual("fa-user");
     });
 });

@@ -4,7 +4,7 @@ let internData;
 let intern;
 
 beforeAll(() => {
-    internData = ["Furhan Jr", "0.5", "student@furhan.dev", "University of Waterloo"];
+    internData = ["Furhan Jr", "0.5", "student@furhan.dev", "4/20/15", "University of Waterloo"];
 });
 
 beforeEach(() => {

@@ -4,7 +4,7 @@ let managerData;
 let manager;
 
 beforeAll(() => {
-    managerData = ["Big Boss", "001", "boss@furhan.dev", "666"];
+    managerData = ["Big Boss", "001", "boss@furhan.dev", "4/20/15", "666"];
 });
 
 beforeEach(() => {
