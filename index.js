@@ -6,10 +6,13 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+// get template functions
 const { htmlTemplate, cardTemplate } = require("./src/html-templates");
 
+// keep track of team
 const team = [];
 
+// prompt user for input
 const promptUser = () => {
     return inquirer
         .prompt([
@@ -58,6 +61,7 @@ const promptUser = () => {
                 when: answers => answers.role === "Intern"
             }
         ])
+        // add employee to team and prompt to add another employee
         .then(answers => {
             addEmployee(answers);
             return inquirer
@@ -74,6 +78,7 @@ const promptUser = () => {
         });
 }
 
+// adds appropriate employee type to teams array
 function addEmployee(answers) {
     const employeeData = [answers.name, answers.id, answers.email, answers.startDate];
     switch (answers.role) {
@@ -89,6 +94,7 @@ function addEmployee(answers) {
     }
 }
 
+// generate team profile html based on team array
 const generateTeamProfile = () => {
     cards = [];
     team.forEach(employee => cards.push(cardTemplate(employee)));
@@ -97,5 +103,5 @@ const generateTeamProfile = () => {
 
 promptUser()
     .then(() => fs.writeFileSync('./dist/team-profile.html', generateTeamProfile()))
-    .then(() => console.log(`Succesfully generated ${__dirname}/dist/team-profile.html`))
+    .then(() => console.log(`Succesfully generated your team profile: ${__dirname}/dist/team-profile.html`))
     .catch((err) => console.error(err));
