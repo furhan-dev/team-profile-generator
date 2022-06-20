@@ -86,32 +86,33 @@ const cardTemplate = (employee) => {
     }
 
     return `<div class="card px-0 m-2 shadow-sm" style="width: 18rem;">
-    <div class="card-header text-center bg-danger bg-opacity-75 bg-gradient text-white pt-4 pb-1">
-        <h2 class="mb-0">${employee.getName()}</h2>
-        <p class="role text-white">
-            <i class="fa-solid ${employee.getIcon()}"></i>
-            ${employee.getRole()}
-        </p>
-    </div>
-    <ul class="list-group list-group-flush m-auto border-0">
-    <li class="list-group-item">
-        <ul class="list-group list-group list-group-horizontal my-3">
-        <li class="list-group-item bg-dark bg-opacity-75 text-white">Empolyee ID</li>
-        <li class="list-group-item">${employee.getId()}</li>
-        </ul>
-        <ul class="list-group list-group list-group-horizontal my-3">
-        <li class="list-group-item bg-dark bg-opacity-75 text-white">Email</li>
-        <li class="list-group-item">${employee.getEmail()}</li>
-        </ul>
-        <ul class="list-group list-group list-group-horizontal my-3">
-        <li class="list-group-item bg-dark bg-opacity-75 text-white">${roleSpecificLabel}</li>
-        <li class="list-group-item">${roleSpecificValue}</li>
-        </ul>
-    </li>
-    </ul>
-    <div class="card-footer text-center">
-    <small class="text-muted ms-2">Employee since ${employee.getStartDate()}</small>
-</div>`
+                <div class="card-header text-center bg-danger bg-opacity-75 bg-gradient text-white pt-4 pb-1">
+                    <h2 class="mb-0">${employee.getName()}</h2>
+                    <p class="role text-white">
+                        <i class="fa-solid ${employee.getIcon()}"></i>
+                        ${employee.getRole()}
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush m-auto border-0">
+                <li class="list-group-item">
+                    <ul class="list-group list-group list-group-horizontal my-3">
+                    <li class="list-group-item bg-dark bg-opacity-75 text-white">Empolyee ID</li>
+                    <li class="list-group-item">${employee.getId()}</li>
+                    </ul>
+                    <ul class="list-group list-group list-group-horizontal my-3">
+                    <li class="list-group-item bg-dark bg-opacity-75 text-white">Email</li>
+                    <li class="list-group-item">${employee.getEmail()}</li>
+                    </ul>
+                    <ul class="list-group list-group list-group-horizontal my-3">
+                    <li class="list-group-item bg-dark bg-opacity-75 text-white">${roleSpecificLabel}</li>
+                    <li class="list-group-item">${roleSpecificValue}</li>
+                    </ul>
+                </li>
+                </ul>
+                <div class="card-footer text-center">
+                    <small class="text-muted ms-2">Employee since ${employee.getStartDate()}</small>
+                </div>
+            </div>`
 
 }
 
