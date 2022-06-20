@@ -114,3 +114,8 @@ const cardTemplate = (employee) => {
 </div>`
 
 }
+
+module.exports = {
+    htmlTemplate,
+    cardTemplate
+};
