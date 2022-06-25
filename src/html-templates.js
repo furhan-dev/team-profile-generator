@@ -77,7 +77,7 @@ const cardTemplate = (employee) => {
             break;
         case 'Engineer':
             roleSpecificLabel = 'GitHub';
-            roleSpecificValue = employee.getGithub();
+            roleSpecificValue = `<a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a>`;
             break;
         case 'Intern':
             roleSpecificLabel = 'College';
@@ -101,7 +101,7 @@ const cardTemplate = (employee) => {
                     </ul>
                     <ul class="list-group list-group list-group-horizontal my-3">
                     <li class="list-group-item bg-dark bg-opacity-75 text-white">Email</li>
-                    <li class="list-group-item">${employee.getEmail()}</li>
+                    <li class="list-group-item"><a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
                     </ul>
                     <ul class="list-group list-group list-group-horizontal my-3">
                     <li class="list-group-item bg-dark bg-opacity-75 text-white">${roleSpecificLabel}</li>
